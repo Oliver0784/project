@@ -1,12 +1,18 @@
 import React from 'react'
-import Nav from '../components/Nav'
-import Footer from '../components/Footer'
+import Carousel from '../components/Carousel';
+
+
 
 function LandingPage() {
+  const images = [
+    'https://wallpapercave.com/wp/wp3646110.jpg',
+    'https://wallpapercave.com/wp/wp3646110.jpg',
+    'https://wallpapercave.com/wp/wp3646110.jpg'
+  ];
+
   return (
     <div>
-        <Nav/>
-        <Footer/>
+        <Carousel images={images} />
     </div>
   )
 }
