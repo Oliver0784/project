@@ -1,0 +1,61 @@
+footer {
+    background-color: #555555;
+    color: white;
+    align-content: center;
+}
+.Footer{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    color: white;
+    background-color: #555555;
+
+}
+.Logoo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+h4 ,h3{
+    background-color: orange;
+    color: white;
+    height: 30px;
+    padding: 5px;
+    border-radius: 10px;
+}
+.Address {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.Contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.SocialMedia {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.NewsLetter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}.NewsLetter div {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    align-items: center;
+    height: 40px;
+    color: black;
+}
+.NewsLetter button {
+    border: none;
+    background-color: black;
+    color: white;
+    height: 40px;
+    margin-top: 30px;
+
+}

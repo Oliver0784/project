@@ -1,0 +1,88 @@
+.Body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.container2 {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+
+}
+.invite img {
+ height: 120%;
+ width: 80%;
+
+}
+.motivate {
+    display: flex;
+    color: #555555;
+    flex-direction: column;
+}
+
+.motivate button {
+
+    background-color: orange;
+    color: white;
+    height: 30px;
+    width: 150px;
+border-radius: 5%;
+border: none;
+margin-left: 25%;
+margin-top: 10%;
+}
+.blog{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+
+}
+.blog div {
+
+    display: flex;
+    padding: 15px;
+    border-radius: 10px;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    background-color: ghostwhite;
+}
+.blog a{
+  color: #555555;
+  text-decoration: none;
+  padding: 10px;
+}
+.blog a:hover{
+    background-color: orange;
+    width: 100px;
+    border-radius: 10px
+}
+.filter {
+    display: flex;
+    justify-content: space-evenly;
+    padding:20px;
+    background-color: orange;
+    margin-top: 20px;
+    margin-left:15%;
+    margin-right: 15%;
+    /* height: 100px; */
+}
+.filter div, button {
+    background-color: white;
+    color: #555555;
+    align-items: center;
+    padding: 10px;
+    width: 150px;
+    height: 25%;
+    border: none;
+    border-radius: 5px;
+
+}
+.filter button{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
