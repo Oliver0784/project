@@ -2,58 +2,60 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Link,useNavigate } from 'react-router-dom';
 
-const Login = () => {
-  const navigate=useNavigate();
-  const [id, setId] = useState('');
-  const [name, setName] = useState('');
-  const [password, setPassword] = useState('');
+function Login() {
+  const initialValues = {
+    "id":"",
+    "name": "",
+    "password": ""
+};
+const [values, setValues] = useState(initialValues);
+const navigate=useNavigate();
 
-  const handleIdChange = (event) => {
-    setId(event.target.value);
-  };
+const handleInputChange = (e) => {
+  console.log("val",e.target.value, "name", e.target.name)
 
-  const handleNameChange = (event) => {
-    setName(event.target.value);
-  };
+  const { name, value } = e.target;
+  setValues({
+    ...values,
+    [name]: value,
+  });
+} 
 
-  const handlePasswordChange = (event) => {
-    setPassword(event.target.value);
-  };
 
   const handleSubmit=(e)=>{
     e.preventDefault();
-    console.log('submitting',)
-    axios.post('http://localhost:3001/login').then(
+    console.log('submitting',values)
+
+    axios.post('http://localhost:3001/login', values).then(
         res=>{
-            alert("YOU ARE LOGGED IN!")
-            navigate('/')  
+          navigate('/jobs');
+            // alert("SUCCESFUL LOG IN")
+           
         } ).catch(err=>{
         console.log(err)
     })
   }
 
+
+
   return (
-    <div>
-      <h2>Login</h2>
-      <form >
+    <form onSubmit={handleSubmit}>
       <label>
-          id:
-          <input name='id' type="text" value={id} onChange={handleIdChange} />
-        </label>
-        <label>
-          Name:
-          <input name='name'type="text" value={name} onChange={handleNameChange} />
-        </label>
-        <br />
-        <label>
-          Password:
-          <input name='password' type="password" value={password} onChange={handlePasswordChange} />
-        </label>
-        <br />
-        <button type="submit" onSubmit={handleSubmit}>Log in</button>
+        id/passport number:
+        <input name='id'  type="text"  onChange={(e)=>handleInputChange(e)} />
+      </label>
+      <label>
+        Name:
+        <input name='name' type="text" onChange={(e)=>handleInputChange(e)} />
+      </label>
+      <label>
+        Password:
+        <input name='password' type="password" onChange={(e)=>handleInputChange(e)} />
+      </label>
+        <button type="submit" onChange={(e)=>handleSubmit(e)}>Log in</button>
         <h4>Don't have an account? <Link to={`/register`}>click to register</Link></h4>
       </form>
-    </div>
+    
   );
 };
 

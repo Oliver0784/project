@@ -36,7 +36,7 @@ const handleInputChange = (e) => {
     e.preventDefault();
     console.log('submitting',values)
 
-    axios.post('http://localhost:3001/', values).then(
+    axios.post('http://localhost:3001/register', values).then(
         res=>{
             alert("SIGNUP SUCCESFUL LOG IN TO CONTINUE")
             navigate('/login')  
@@ -50,11 +50,11 @@ const handleInputChange = (e) => {
   return (
     <form onSubmit={handleSubmit}>
       <label>
-        id:
+        id/passport number:
         <input name='id'  type="text"  onChange={(e)=>handleInputChange(e)} />
       </label>
       <label>
-        Name:
+        Full name as it appears in the Id/passport:
         <input name='name' type="text" onChange={(e)=>handleInputChange(e)} />
       </label>
       <label>

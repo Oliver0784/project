@@ -3,7 +3,7 @@ import '../styles/landingPage.css'
 
 
 
-function LandingPage() {
+function HomePage() {
  
   return (
     <div className='Body'>
@@ -61,4 +61,4 @@ function LandingPage() {
   )
 }
 
-export default LandingPage
+export default HomePage

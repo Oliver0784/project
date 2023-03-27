@@ -4,10 +4,10 @@
     justify-content: space-between;
 }
 .container2 {
+    padding: 10px;
     padding-top: 20px;
     display: flex;
     flex-direction: row;
-
 }
 .invite img {
  height: 120%;
@@ -22,7 +22,7 @@
 
 .motivate button {
 
-    background-color: orange;
+    background-color: #1a2b53;
     color: white;
     height: 30px;
     width: 150px;
@@ -54,7 +54,7 @@ margin-top: 10%;
   padding: 10px;
 }
 .blog a:hover{
-    background-color: orange;
+    background-color: #1a2b53;
     width: 100px;
     border-radius: 10px
 }
@@ -62,7 +62,7 @@ margin-top: 10%;
     display: flex;
     justify-content: space-evenly;
     padding:20px;
-    background-color: orange;
+    background-color: #1a2b53;
     margin-top: 20px;
     margin-left:15%;
     margin-right: 15%;

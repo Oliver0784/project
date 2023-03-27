@@ -1,5 +1,5 @@
 footer {
-    background-color: #555555;
+    background-color:#1a2b53;
     color: white;
     align-content: center;
 }
@@ -8,7 +8,7 @@ footer {
     flex-direction: row;
     justify-content:space-evenly;
     color: white;
-    background-color: #555555;
+    background-color: #1a2b53;
 
 }
 .Logoo {
@@ -17,7 +17,7 @@ footer {
     justify-content: space-evenly;
 }
 h4 ,h3{
-    background-color: orange;
+    background-color: #294074;
     color: white;
     height: 30px;
     padding: 5px;
