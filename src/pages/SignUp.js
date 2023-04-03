@@ -34,13 +34,13 @@ const handleInputChange = (e) => {
 
   const handleSubmit=(e)=>{
     e.preventDefault();
-    console.log('submitting',values)
 
     axios.post('http://localhost:3001/register', values).then(
         res=>{
             alert("SIGNUP SUCCESFUL LOG IN TO CONTINUE")
             navigate('/login')  
         } ).catch(err=>{
+          alert(err.response.data.message)
         console.log(err)
     })
   }

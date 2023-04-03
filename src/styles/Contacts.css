@@ -1,0 +1,23 @@
+.contacts{
+    
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    margin/-bottom: 2rem;
+}
+.c-speech{
+    width: 40%;
+    padding-left: 2rem;
+}
+.contact {
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+}
+.contact-one{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}

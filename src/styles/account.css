@@ -1,0 +1,22 @@
+.account{
+    padding-top: 2rem;
+    margin: 4rem;
+    border-top-right-radius: 25%;
+    border-bottom-left-radius: 25%;
+}
+.profile-speech{
+    display: flex;
+    flex-direction: row;
+}
+.profile-speech-content{
+    width: 70%;
+}
+.profile-img img {
+    padding-left: 4rem;
+    height: 100%;
+    width:90%;
+    border-top-left-radius:30% ;
+    border-bottom-right-radius: 30%;
+    animation: slide-in 1s ease-in;
+   
+   }

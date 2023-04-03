@@ -1,9 +1,31 @@
-import React from 'react';
+import React ,{useState , useEffect}from 'react';
 import '../styles/Nav.css'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Nav() {
  
+  const navigate=useNavigate();
+  const [loggedIn, setLoggedIn] = useState(false);
+  const [currentUser, setCurrentUser] = useState("");
+
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem('currentUser'));
+    if (user) {
+      setCurrentUser(user.response.data.name);
+      setLoggedIn(true);
+    }
+  }, []);
+
+ 
+  const handleLogout = () => {
+    localStorage.removeItem("currentUser");
+    setCurrentUser("");
+    setLoggedIn(false);
+    navigate('/');
+    window.location.reload();
+  };
+
+
   return (
     <div className='container'>
 
@@ -15,12 +37,22 @@ function Nav() {
        <ul>
         <li><Link to={`/`}>Home</Link></li>
         <li><Link to={`/`}>About</Link></li>
-        <li><Link to={`/`}>Contact</Link></li>
-        <lu className="logSign">
-        <li><Link to={`/login`}>Login</Link></li>
-        <li><Link to={`/register`}>SignUp</Link></li>
-        </lu>
+        <li><Link to={`/contact`}>Contact</Link></li>
+        {loggedIn ? (
+          <>
+          
+          <li><Link to="/jobs">Job-List</Link></li>
+            <li><Link to="/account">welcome, {currentUser}</Link></li>
+            <li><button onClick={handleLogout}>Log out</button></li>
+          </>
+        ) : (
+          <>
+            <li><Link to="/login">Log in</Link></li>
+            <li><Link to="/register">Sign up</Link></li>
+          </>
+        )}
       </ul>
+     
     </div>
   
 

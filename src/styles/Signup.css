@@ -3,7 +3,7 @@ form {
     flex-direction: column;
     max-width: 500px;
     margin: 0 auto;
-    margin-top: 10px;
+    margin-top: 8rem;
     margin-bottom:40px;
     padding: 20px;
     border: 1px solid #ccc;
@@ -34,7 +34,7 @@ form {
   }
   
   button {
-    background-color:orange;
+    background-color:#1F75FE;
     color: white;
     padding: 10px 20px;
     border: none;

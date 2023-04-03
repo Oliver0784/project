@@ -1,9 +1,14 @@
 .container {
 
+  position: fixed; /* Makes the navbar fixed to the top of the viewport */
+  top: 0; /* Positions the navbar at the top of the viewport */
+  width: 100%; /* Makes the navbar take up the full width of the viewport */
+  background-color: transparent; /* Sets the background color of the navbar to transparent */
+  z-index: 1; 
     display: flex;
     flex-direction: row;
-    padding: 10px;
-    justify-content: center;
+    padding: 2rem;
+    justify-content: space-between;
 }
 .Logo {
 
@@ -15,15 +20,13 @@
     justify-content: center;
     
 }
-.Logo h3 {
-
-    color:#555555;
-}
 .menu {
 height: 70px;
+padding-right: 2rem;
 }
 
 .menu ul {
+ 
   list-style: none;
   margin: 0;
   padding: 0;
@@ -32,21 +35,22 @@ height: 70px;
 }
 
 .menu li {
+  color: white;
   margin: 0 10px;
 }
 
 .menu a {
   display: block;
-  color: #555555;
+  color: rgb(16, 25, 161);
   text-decoration: none;
   font-size: 18px;
   line-height: 50px;
   padding: 0 10px;
 }
 
-.menu a:hover {
+.menu a:hover,a:focus {
   border-radius: 10px;
-  background-color:  #b0c4de;
+  color:  #FFB347;
 }
 
 .logSign{
